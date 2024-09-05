@@ -1,13 +1,283 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+  width:10px;
+  height:10px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: #201c29;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+}
+
+body::-webkit-scrollbar-track{
+  background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.text-spiral {
+  background: linear-gradient(90deg, red, orange 12.5%, yellow 25%, green 37.5%, cyan 50%, blue 62.5%, violet 75%, pink 87.5%, red);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow 3s linear infinite;
+}
+
+
+.hover-text-spiral:hover{
+  background: linear-gradient(90deg, red, orange 12.5%, yellow 25%, green 37.5%, cyan 50%, blue 62.5%, violet 75%, pink 87.5%, red);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow 3s linear infinite;
+}
+
+.hidden-animate{
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.5s;
+  transform: translateY(300%);
+}
+
+.hidden-animate-top{
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.5s;
+  transform: translateY(-100%);
+}
+
+.hidden-animate-left{
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.5s;
+  transform: translateX(-100%);
+}
+
+.hidden-animate-left-delay{
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.5s;
+  transform: translateX(-100%);
+  transition-delay: 5s;
+}
+
+.hidden-animate-right{
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.5s;
+  transform: translateX(100%);
+}
+
+.hidden-animate-right-delay{
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.5s;
+  transform: translateX(100%);
+  transition-delay: 5s;
+}
+
+.hidden-animate-bot{
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.5s;
+  transform: translateY(100%);
+}
+
+.hidden-animate-bot-delay{
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.5s;
+  transform: translateY(100%);
+  transition-delay: 5s;
+}
+
+.hidden-animate-left-title{
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.5s;
+  transform: translateX(-100%);
+}
+
+.hidden-animate-left-title:nth-child(1){
+  transition-delay: 0s;
+}
+
+.hidden-animate-left-title:nth-child(2){
+  transition-delay: 1s;
+}
+
+.hidden-animate-left-title:nth-child(3){
+  transition-delay: 2s;
+}
+
+.hidden-animate-left-title:nth-child(4){
+  transition-delay: 3s;
+}
+
+.hidden-animate-left-title:nth-child(5){
+  transition-delay: 4s;
+}
+
+.show-animate{
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0)
+}
+
+.show-animate-blur{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.skill {
+  box-shadow: -1rem 0 3rem #000;
+  position: relative;
+  transition: transform 0.3s; /* Changed transition to transform */
+  transform: translateY(0); /* Added initial Y-axis translation */
+}
+
+.card-list{
+  display: flex;
+  padding: 3rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.card-list::-webkit-scrollbar{
+  width:10px;
+  height:10px;
+}
+
+.card-list::-webkit-scrollbar-thumb{
+  background: #201c29;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+}
+
+.card-list::-webkit-scrollbar-track{
+  background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+}
+
+.skill-card{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+  min-width: 250px;
+  padding: 1.5rem;
+  box-shadow: -1rem 0 3rem #000;
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+
+.skill-card:hover{
+  transform: translateY(-1rem);
+}
+
+.skill-card:hover~.skill-card{
+  transform: translateX(4.1rem);
+}
+
+.skill-card:not(:first-child){
+  margin-left: -4rem;
+}
+
+.cards{
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+.card{
+  width: 30vmin;
+  aspect-ratio : 5 / 7;
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.card-group,
+.card{
+  aspect-ratio: 5/7;
+  width: 30vmin;
+}
+
+.card:nth-child(3){
+  transform: translate(-8%, 4%) rotate(-1deg);
+}
+
+.card:nth-child(2){
+  transform: rotate(4deg);
+}
+
+.card:nth-child(1){
+  transform: translateX(-16%) rotate(-4deg);
+}
+
+.card-group:hover > .card:nth-child(3){
+  transform: translate(70%, 14%) rotate(15deg);
+}
+
+.card-group:hover > .card:nth-child(2){
+  transform: translate(0, 2%) rotate(2deg);
+}
+
+.card-group:hover > .card:nth-child(1){
+  transform: translate(-70%, 3%) rotate(-13deg);
+}
+
+@-webkit-keyframes swirl-in-fwd{0%{-webkit-transform:rotate(-540deg) scale(0);transform:rotate(-540deg) scale(0);opacity:0}100%{-webkit-transform:rotate(0) scale(1);transform:rotate(0) scale(1);opacity:1}}@keyframes swirl-in-fwd{0%{-webkit-transform:rotate(-540deg) scale(0);transform:rotate(-540deg) scale(0);opacity:0}100%{-webkit-transform:rotate(0) scale(1);transform:rotate(0) scale(1);opacity:1}}
+
+.swirl-in-fwd{-webkit-animation:swirl-in-fwd 5s ease-out both;animation:swirl-in-fwd 5s ease-out both}
+
+.translate-out-right{
+  transform: translateX(100%);
+}
+
+.translate-out-left{
+  transform: translateX(-100%);
+}
+
+@media only screen and (max-width: 765px) {
+  .skill-card{
+    width: 300px;
+  }
+}
+
+@media(prefers-reduced-motion){
+  .hidden{
+    transition: none;
+  }
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }
