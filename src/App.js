@@ -22,6 +22,7 @@ function App() {
 
     return (
         <div className="md:text-3xl text-2xl bg-neutral-900 flex flex-col h-fit text-white">
+            <title>Marcis Portfolio</title>
             {hello && <Hello showHello={() => setHello(false)} />}
             {introduction && <Introduction showIntroduction = {() => setIntroduction(false)} />}
             {!hello && !introduction && <Main />}
