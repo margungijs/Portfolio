@@ -24,7 +24,7 @@ const Contacts = () => {
                     <h1 className="md:indent-4">Phone number:</h1>
                     <h1 className="text-center md:text-5xl text-3xl font-bold text-blue-300">+371 26684646</h1>
                     <h1 className="md:indent-4">E-mail:</h1>
-                    <h1 className="text-center md:text-5xl text-3xl font-bold text-red-300 break-all">marcis.jansons@gmail.com</h1>
+                    <h1 className="text-center md:text-5xl text-3xl font-bold text-red-300 break-all">marcisjansons12@gmail.com</h1>
                     <h1 className = "md:mt-10 mt-4 text-center">This is the end of my portfolio! Have a good day!</h1>
                 </div>
             </div>
