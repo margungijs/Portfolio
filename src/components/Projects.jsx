@@ -7,8 +7,8 @@ const Projects = () => {
 
     const projects = [
         {
-            title: "Jira V2",
-            description: "Jira V2 is a task managing web app - as the name suggests, something like Gira. Users were able to sign up to use Jira V2 to manage their tasks. Users were also able to invite other users to their manageable tasks and give the other users tasks. There were many features that made Jira V2 more functional such as the task calendar, task completion table and many more. Jira V2 was the first time I used Laravel and Tailwind. React was also user for the creation of Jira V2.",
+            title: "Gira V2",
+            description: "Gira V2 is a task managing web app - as the name suggests, something like Jira. Users were able to sign up to use Gira V2 to manage their tasks. Users were also able to invite other users to their manageable tasks and give the other users tasks. There were many features that made Gira V2 more functional such as the task calendar, task completion table and many more. Gira V2 was the first time I used Laravel and Tailwind. React was also user for the creation of Gira V2.",
             links: [
                 { label: "Back-end Github", url: "https://github.com/fur1ozz/giraV2", color: "text-red-300" },
                 { label: "Front-end Github", url: "https://github.com/margungijs/giraV2", color: "text-blue-300" }
@@ -23,7 +23,7 @@ const Projects = () => {
         },
         {
             title: "Hollow Blue",
-            description: "Hollow Blue is a anime themed memory game. Users were able to log in and play different kinds of memory games such as match the cards, word memory game and number memory game. There were leaderboards for the best players and also users were able to buy in-game currency. For Hollow Blue, I also used React, Laravel and Tailwind.",
+            description: "Hollow Blue is an anime themed memory game. Users were able to log in and play different kinds of memory games such as match the cards, word memory game and number memory game. There were leaderboards for the best players and also users were able to buy in-game currency. For Hollow Blue, I also used React, Laravel and Tailwind.",
             links: [
                 { label: "Back-end Github", url: "https://github.com/margungijs/HollowBlue-back", color: "text-red-300" },
                 { label: "Front-end Github", url: "https://github.com/margungijs/HollowBlue-front", color: "text-blue-300" }
@@ -31,7 +31,7 @@ const Projects = () => {
         },
         {
             title: "Mobile Game",
-            description: "The Mobile Game was an dodging based memory game. The user had to play as an alien spaceship that has to dodge other alien spaceships flying towards the user. The game ended once the users lives ended and the score of the game was sent to the leaderboard and saved so users could battle against each other. Users were also able to buy in-game currency. The game was made with React-Native with expo andLaravel.",
+            description: "The Mobile Game is a dodging based game. The user had to play as an alien spaceship that has to dodge other alien spaceships flying towards the user. The game ended once the users lives ended and the score of the game was sent to the leaderboard and saved so users could battle against each other. Users were also able to buy in-game currency. The game was made with React-Native with expo andLaravel.",
             links: [
                 { label: 'Github', url: 'https://github.com/ipa21alekssvelvelis/book-of-run', color: "text-violet-300"}
             ]
