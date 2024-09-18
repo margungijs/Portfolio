@@ -17,12 +17,17 @@ const Projects = () => {
         {
             title: "Showmaker.",
             description: "Showmaker is a ticket selling and buying website. Users were able to buy tickets to show and even give users the chance to set up their own shows. Showmaker is my pride and joy, because it was the first project where people complimented my ability to style websites. For Showmaker I used Next.js, Laravel with Docker and Tailwind.",
-            links: []
+            links: [
+                { label: 'Github', url: 'https://github.com/margungijs/Showmaker', color: "text-violet-300"}
+            ]
         },
         {
             title: "Hollow Blue",
             description: "Hollow Blue is a anime themed memory game. Users were able to log in and play different kinds of memory games such as match the cards, word memory game and number memory game. There were leaderboards for the best players and also users were able to buy in-game currency. For Hollow Blue, I also used React, Laravel and Tailwind.",
-            links: []
+            links: [
+                { label: "Back-end Github", url: "https://github.com/margungijs/HollowBlue-back", color: "text-red-300" },
+                { label: "Front-end Github", url: "https://github.com/margungijs/HollowBlue-front", color: "text-blue-300" }
+            ]
         },
         {
             title: "Mobile Game",
